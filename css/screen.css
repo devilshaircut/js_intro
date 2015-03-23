@@ -66,17 +66,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 5, screen.scss */
 body {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
 }
 
-/* line 9, screen.scss */
+/* line 11, screen.scss */
 ol#tiles {
   display: block;
   float: left;
   width: 100%;
-  margin: 40px 0 0 0;
-  text-align: center;
+  margin: 40px 0;
 }
-/* line 15, screen.scss */
+/* line 16, screen.scss */
 ol#tiles > li {
   display: block;
   float: left;
@@ -84,14 +84,14 @@ ol#tiles > li {
   height: 50px;
   margin: 0 0 1px 0;
 }
-/* line 21, screen.scss */
+/* line 22, screen.scss */
 ol#tiles > li > ol {
   display: block;
   float: left;
   width: 100%;
   height: 50px;
 }
-/* line 26, screen.scss */
+/* line 27, screen.scss */
 ol#tiles > li > ol > li {
   display: inline-block;
   width: 50px;
@@ -99,7 +99,7 @@ ol#tiles > li > ol > li {
   margin: 0 1px 0 0;
   position: relative;
 }
-/* line 32, screen.scss */
+/* line 33, screen.scss */
 ol#tiles > li > ol > li > span {
   display: inline-block;
   width: 50px;
@@ -136,7 +136,7 @@ ol#tiles > li > ol > li > span {
   transition-duration: 0.25s;
   z-index: 200;
 }
-/* line 52, screen.scss */
+/* line 53, screen.scss */
 ol#tiles > li > ol > li:after {
   content: '';
   display: inline-block;
@@ -169,14 +169,14 @@ ol#tiles > li > ol > li:after {
   z-index: -150;
 }
 
-/* line 79, screen.scss */
+/* line 78, screen.scss */
 ol#tiles > li > ol > li.flipped > span {
   -moz-transform: rotateY(0);
   -ms-transform: rotateY(0);
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
-/* line 83, screen.scss */
+/* line 82, screen.scss */
 ol#tiles > li > ol > li.flipped:after {
   -moz-transform: rotateY(0);
   -ms-transform: rotateY(0);

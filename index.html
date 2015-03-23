@@ -2,36 +2,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JavaScript Rocks!</title>
-  <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <link href="css/print.css" media="print" rel="stylesheet" type="text/css" />
-  <!--[if IE]>
-      <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <![endif]-->
-  <script src="js/jquery-1.11.2.min.js"></script>
-  <script src="js/script.js"></script>
+  <title>JavaScript Matching Game</title>           <!-- This is the webpage title. -->
+  <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />    <!-- This is the stylesheet (design instructions) for our game. -->
+  <script src="js/jquery-1.11.2.min.js"></script>   <!-- This is jQuery, a dependency for our game. -->
+  <script src="js/script.js"></script>              <!-- This is our main JavaScript file that functions as the game. -->
 </head>
 <body>
 
-  <ol id="tiles">
-    <li>
-      <ol id="row1">
+  <ol id="tiles">       <!-- This HTML element will hold the entire grid. -->
+    <li>                <!-- This HTML element will hold the list which represents the row of grid tiles. Repeat this element to increse the grid size. -->
+      <ol id="row1">    <!-- JavaScript will populate this row with <li> elements that represent tiles. -->
       </ol>
     </li>
     <li>
-      <ol id="row2">
+      <ol id="row2">    <!-- This is the second row repetition. -->
       </ol>
     </li>
     <li>
-      <ol id="row3">
+      <ol id="row3">    <!-- This is the third row repetition. -->
       </ol>
     </li>
     <li>
-      <ol id="row4">
+      <ol id="row4">    <!-- This is the fourth row repetition. -->
       </ol>
     </li>
-  </ol>
-  <!-- ol#tiles -->
+  </ol>                 <!-- We have fully constructed our grid with four rows. -->
+
+  <input type="button" value="Start Over!" onClick="window.location.reload()">    <!-- This is a simple reset button. It resets the game by refreshing the page, which re-triggers all of the JavaScript. -->
 
 </body>
 </html>

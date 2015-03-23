@@ -1,35 +1,36 @@
-@import "compass/reset";
-@import "compass/css3";
-@import "compass/utilities";
+// Import some basic tools to start the project with.
+@import "compass/reset";                // Remove gross browser-specific defaults.
+@import "compass/css3";                 // Include library for CSS3 for things like animations.
 
 body {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
 }
 
-ol#tiles {
+// This describes the visual representation of the game grid.
+ol#tiles {                              // This is the main grid container.
   display: block;
   float: left;
   width: 100%;
-  margin: 40px 0 0 0;
-  text-align: center;
-  > li {
+  margin: 40px 0;
+  > li {                                // This contains the grid's rows.
     display: block;
     float: left;
     width: 100%;
     height: 50px;
     margin: 0 0 1px 0;
-    > ol {
+    > ol {                              // This is the list of tiles in the row.
       display: block;
       float: left;
       width: 100%;
       height: 50px;
-      > li {
+      > li {                            // This is a tile.
         display: inline-block;
         width: 50px;
         height: 50px;
         margin: 0 1px 0 0;
         position: relative;
-        > span {
+        > span {                        // This represents the front of the tile andholds the tile number.
           display: inline-block;
           width: 50px;
           height: 50px;
@@ -40,16 +41,16 @@ ol#tiles {
           position: absolute;
           left: 0;
           top: 0;
-          @include transform(rotateY(180deg));
-          @include backface-visibility(hidden);
-          @include transition-delay(0);
+          @include transform(rotateY(180deg));    // The tiles all begin face down.
+          @include backface-visibility(hidden);   // When the tile is face down, you can't see it's content.
+          @include transition-delay(0);           // These transition rules animate the flip effect.
           @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
           @include transition-property(transform);
           @include transition-duration(0.25s);
           z-index: 200;
         }
       }
-      > li:after {
+      > li:after {                      // This represents the back of the tile.
         content: '';
         display: inline-block;
         width: 50px;
@@ -58,8 +59,8 @@ ol#tiles {
         position: absolute;
         left: 0;
         top: 0;
-        @include transform(rotateY(180deg));
-        @include transition-delay(0);
+        @include transform(rotateY(180deg));    // The tiles all begin face down.
+        @include transition-delay(0);           // These transition rules animate the flip effect.
         @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
         @include transition-property(transform);
         @include transition-duration(0.25s);
@@ -69,19 +70,17 @@ ol#tiles {
   }
 }
 
-
-
-
+// This describes the "flipped over" state of a tile.
 ol#tiles {
   > li {
     > ol {
       > li.flipped {
         > span {
-          @include transform(rotateY(0));
+          @include transform(rotateY(0));       // When the tile is flipped over, set its front face rotation to normal.
         }
       }
       > li.flipped:after {
-        @include transform(rotateY(0));
+        @include transform(rotateY(0));         // When the tile is flipped over, also set its back face rotation to normal.
       }
     }
   }
