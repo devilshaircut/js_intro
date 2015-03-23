@@ -69,6 +69,7 @@ $(document).ready(function() {
     }
   };
 
+  // Draw the grid into the HTML/DOM.
   drawGrid(numberOfRows, generatedGrid);
 
 });
