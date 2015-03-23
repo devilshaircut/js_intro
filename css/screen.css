@@ -81,34 +81,62 @@ ol#tiles > li {
   display: block;
   float: left;
   width: 100%;
+  height: 50px;
+  margin: 0 0 1px 0;
 }
-/* line 19, screen.scss */
+/* line 21, screen.scss */
 ol#tiles > li > ol {
   display: block;
   float: left;
   width: 100%;
+  height: 50px;
 }
-/* line 23, screen.scss */
+/* line 26, screen.scss */
 ol#tiles > li > ol > li {
   display: inline-block;
   width: 50px;
   height: 50px;
-  margin: 0 1px 1px 0;
+  margin: 0 1px 0 0;
+  position: relative;
+}
+/* line 32, screen.scss */
+ol#tiles > li > ol > li > span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
   background: #cccccc;
   font-size: 24px;
   line-height: 46px;
   font-weight: 700;
-  position: relative;
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
-  transform: rotateY(0deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -moz-transition-delay: 0;
+  -o-transition-delay: 0;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
   z-index: 200;
 }
-/* line 37, screen.scss */
+/* line 52, screen.scss */
 ol#tiles > li > ol > li:after {
   content: '';
   display: inline-block;
@@ -118,9 +146,40 @@ ol#tiles > li > ol > li:after {
   position: absolute;
   left: 0;
   top: 0;
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
-  transform: rotateY(0deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -moz-transition-delay: 0;
+  -o-transition-delay: 0;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+  -moz-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
   z-index: -150;
+}
+
+/* line 79, screen.scss */
+ol#tiles > li > ol > li.flipped > span {
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+/* line 83, screen.scss */
+ol#tiles > li > ol > li.flipped:after {
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
 }
