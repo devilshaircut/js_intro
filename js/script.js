@@ -86,6 +86,10 @@ var game = {
   totalMatches: null,
   // This is an object for storing game methods.
   methods: {
+    // This method is called onclick - when a user clicks the "Start Over!" button.
+    startOver: function() {
+      window.location.reload();                         // Simply refresh the page to re-initialize the game.
+    },
     // This method is called onclick - when a user clicks a tile.
     flipTile: function(tileToFlip) {
       // If this is the first time the game is run, set the number of tile pairs to find.
