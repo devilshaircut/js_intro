@@ -1,0 +1,51 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+ol#tiles {
+  display: block;
+  float: left;
+  width: 100%;
+  margin: 40px 0 0 0;
+  text-align: center;
+  > li {
+    display: block;
+    float: left;
+    width: 100%;
+    > ol {
+      display: block;
+      float: left;
+      width: 100%;
+      > li {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 0 1px 1px 0;
+        background: #cccccc;
+        font-size: 24px;
+        line-height: 46px;
+        font-weight: 700;
+        position: relative;
+        @include transform(rotateY(0deg));
+        @include backface-visibility(hidden);
+        z-index: 200;
+      }
+      > li:after {
+        content: '';
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: #888888;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @include transform(rotateY(0deg));
+        z-index: -150;
+      }
+    }
+  }
+}
