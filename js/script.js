@@ -55,13 +55,22 @@ $(document).ready(function() {
 var game = {
   methods: {
     flipTile: function(tileToFlip) {
+      // If this is the first time the game is run, set the number of tile pairs to find.
+      // This number depends on the size of the game board.
       if (game.totalMatches === null) {
         game.totalMatches = ($("ol#tiles li ol").length * $("ol#tiles li ol").length) / 2;
       }
+      // Every time a match is found, the counter decrements by 1.
+      // If the counter is 0, the game already ended so no gameplay should take place.
       if (game.totalMatches === 0) {
         console.log("Refresh the page to start a new game.");
       }
-      if (game.turn[0] === null) {
+      // If the tile being clicked is already flipped, do not execute a game interaction.
+      // Just tell the player that the tile is already flipped over.
+      if ( $("." + tileToFlip).hasClass("flipped") ) {
+        console.log("This tile is already flipped over! Select another tile.");
+      }
+      else if (game.turn[0] === null) {
         game.turn[0] = tileToFlip;
         $("." + tileToFlip).toggleClass("flipped");
       }
