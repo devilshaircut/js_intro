@@ -49,16 +49,6 @@ $(document).ready(function() {
 
   drawGrid(numberOfRows, generatedGrid);
 
-
-  
-
-
-
-
-
-
-
-
 });
 
 
@@ -88,10 +78,8 @@ var game = {
     },
     finishTurn: function() {
       if ( $("." + game.turn[0] + " span").text() === $("." + game.turn[1] + " span").text() ) {
-        console.log("A match was found!");
         game.turn = [null, null];
         game.totalMatches--;
-        console.log(game.totalMatches);
         if (game.totalMatches === 0) {
           window.alert("You win!");
         }
