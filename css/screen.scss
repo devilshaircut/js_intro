@@ -37,7 +37,7 @@ ol#tiles {                              // This is the main grid container.
         width: 10%;
         margin: 0 2px 0 0;
         position: relative;
-        @media screen and (max-width: 720px) {
+        @media screen and (max-width: 720px) {  // Make the site look nice for mobile devices and smaller screen resolutions.
           width: 20%;
         }
         > span {                        // This represents the front of the tile and holds the tile number.
