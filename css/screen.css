@@ -69,48 +69,56 @@ body {
   text-align: center;
 }
 
-/* line 11, screen.scss */
+/* line 10, screen.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 15, screen.scss */
 ol#tiles {
   display: block;
   float: left;
   width: 100%;
   margin: 40px 0;
 }
-/* line 16, screen.scss */
+/* line 20, screen.scss */
 ol#tiles > li {
   display: block;
   float: left;
   width: 100%;
-  height: 50px;
-  margin: 0 0 1px 0;
 }
-/* line 22, screen.scss */
+/* line 24, screen.scss */
 ol#tiles > li > ol {
   display: block;
   float: left;
   width: 100%;
-  height: 50px;
+  line-height: 50%;
 }
-/* line 27, screen.scss */
+/* line 29, screen.scss */
+ol#tiles > li > ol > li:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+/* line 34, screen.scss */
 ol#tiles > li > ol > li {
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin: 0 1px 0 0;
+  width: 10%;
+  margin: 0 2px 2px 0;
   position: relative;
 }
-/* line 33, screen.scss */
+/* line 39, screen.scss */
 ol#tiles > li > ol > li > span {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   background: #cccccc;
-  font-size: 24px;
-  line-height: 46px;
-  font-weight: 700;
+  font-size: 400%;
   position: absolute;
-  left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
@@ -136,16 +144,27 @@ ol#tiles > li > ol > li > span {
   transition-duration: 0.25s;
   z-index: 200;
 }
-/* line 53, screen.scss */
+/* line 57, screen.scss */
+ol#tiles > li > ol > li > span > strong {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -moz-transform: translateY(-66%);
+  -ms-transform: translateY(-66%);
+  -webkit-transform: translateY(-66%);
+  transform: translateY(-66%);
+}
+/* line 65, screen.scss */
 ol#tiles > li > ol > li:after {
   content: '';
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 100%;
   background: #888888;
   position: absolute;
-  left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
@@ -169,14 +188,14 @@ ol#tiles > li > ol > li:after {
   z-index: -150;
 }
 
-/* line 78, screen.scss */
+/* line 91, screen.scss */
 ol#tiles > li > ol > li.flipped > span {
   -moz-transform: rotateY(0);
   -ms-transform: rotateY(0);
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
-/* line 82, screen.scss */
+/* line 95, screen.scss */
 ol#tiles > li > ol > li.flipped:after {
   -moz-transform: rotateY(0);
   -ms-transform: rotateY(0);

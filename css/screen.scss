@@ -7,6 +7,10 @@ body {
   text-align: center;
 }
 
+strong {
+  font-weight: 700;
+}
+
 // This describes the visual representation of the game grid.
 ol#tiles {                              // This is the main grid container.
   display: block;
@@ -17,30 +21,32 @@ ol#tiles {                              // This is the main grid container.
     display: block;
     float: left;
     width: 100%;
-    height: 50px;
-    margin: 0 0 1px 0;
     > ol {                              // This is the list of tiles in the row.
       display: block;
       float: left;
       width: 100%;
-      height: 50px;
+      line-height: 50%;
+      > li:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
       > li {                            // This is a tile.
         display: inline-block;
-        width: 50px;
-        height: 50px;
-        margin: 0 1px 0 0;
+        width: 10%;
+        margin: 0 2px 2px 0;
         position: relative;
         > span {                        // This represents the front of the tile and holds the tile number.
           display: inline-block;
-          width: 50px;
-          height: 50px;
+          width: 100%;
+          height: 100%;
           background: #cccccc;
-          font-size: 24px;
-          line-height: 46px;
-          font-weight: 700;
+          font-size: 400%;
           position: absolute;
-          left: 0;
           top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
           @include transform(rotateY(180deg));  // The tiles all begin face down.
           @include backface-visibility(hidden); // When the tile is face down, you can't see it's content.
           @include transition-delay(0);         // These transition rules animate the flip effect.
@@ -48,17 +54,24 @@ ol#tiles {                              // This is the main grid container.
           @include transition-property(transform);
           @include transition-duration(0.25s);
           z-index: 200;
+          > strong {
+            display: inline-block;
+            position: relative;
+            top: 50%;
+            @include transform(translateY(-66%));
+          }
         }
       }
       > li:after {                              // This represents the back of the tile.
         content: '';
         display: inline-block;
-        width: 50px;
-        height: 50px;
+        width: 100%;
         background: #888888;
         position: absolute;
-        left: 0;
         top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         @include transform(rotateY(180deg));    // The tiles all begin face down.
         @include transition-delay(0);           // These transition rules animate the flip effect.
         @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940));

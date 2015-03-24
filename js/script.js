@@ -62,7 +62,7 @@ $(document).ready(function() {
         var tileCoordinate = "row" + i + "col" + j;
         // Create the tile by appending the tile's HTML to its parent row.
         // Also assign its unique ID and onclick event (thus tying it to the game control logic).
-        $(rowIdentifier).append("<li class='" + tileCoordinate + "' onclick='game.methods.flipTile(\"" + tileCoordinate + "\")'><span>" + grid[0] + "</span></li>");
+        $(rowIdentifier).append("<li class='" + tileCoordinate + "' onclick='game.methods.flipTile(\"" + tileCoordinate + "\")'><span><strong>" + grid[0] + "</strong></span></li>");
         // Remove the appended tile from the base grid.
         grid.splice(0, 1);
       }
