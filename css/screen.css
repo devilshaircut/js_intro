@@ -108,7 +108,7 @@ ol#tiles > li > ol > li {
   margin: 0 2px 0 0;
   position: relative;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   /* line 35, screen.scss */
   ol#tiles > li > ol > li {
     width: 20%;
