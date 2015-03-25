@@ -27,6 +27,7 @@ ol#tiles {                              // This is the main grid container.
       width: 100%;
       border-bottom: 2px solid #ffffff;
       line-height: 50%;
+      overflow: hidden;
       > li:before {                     // This is a placeholder div that allows the tile to have height equal to its width.
         content: '';
         display: block;

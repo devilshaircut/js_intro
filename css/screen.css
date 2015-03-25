@@ -94,14 +94,15 @@ ol#tiles > li > ol {
   width: 100%;
   border-bottom: 2px solid #ffffff;
   line-height: 50%;
+  overflow: hidden;
 }
-/* line 30, screen.scss */
+/* line 31, screen.scss */
 ol#tiles > li > ol > li:before {
   content: '';
   display: block;
   padding-top: 100%;
 }
-/* line 35, screen.scss */
+/* line 36, screen.scss */
 ol#tiles > li > ol > li {
   display: inline-block;
   width: 10%;
@@ -109,12 +110,12 @@ ol#tiles > li > ol > li {
   position: relative;
 }
 @media screen and (max-width: 720px) {
-  /* line 35, screen.scss */
+  /* line 36, screen.scss */
   ol#tiles > li > ol > li {
     width: 20%;
   }
 }
-/* line 43, screen.scss */
+/* line 44, screen.scss */
 ol#tiles > li > ol > li > span {
   display: inline-block;
   width: 100%;
@@ -151,7 +152,7 @@ ol#tiles > li > ol > li > span {
   transition-duration: 0.25s;
   z-index: 200;
 }
-/* line 61, screen.scss */
+/* line 62, screen.scss */
 ol#tiles > li > ol > li > span > strong {
   display: inline-block;
   position: relative;
@@ -161,7 +162,7 @@ ol#tiles > li > ol > li > span > strong {
   -webkit-transform: translateY(-66%);
   transform: translateY(-66%);
 }
-/* line 69, screen.scss */
+/* line 70, screen.scss */
 ol#tiles > li > ol > li:after {
   content: '';
   display: inline-block;
@@ -195,14 +196,14 @@ ol#tiles > li > ol > li:after {
   z-index: -150;
 }
 
-/* line 95, screen.scss */
+/* line 96, screen.scss */
 ol#tiles > li > ol > li.flipped > span {
   -moz-transform: rotateY(0);
   -ms-transform: rotateY(0);
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
-/* line 99, screen.scss */
+/* line 100, screen.scss */
 ol#tiles > li > ol > li.flipped:after {
   -moz-transform: rotateY(0);
   -ms-transform: rotateY(0);
