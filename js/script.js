@@ -104,7 +104,7 @@ var game = {
       }
       // If the tile being clicked is already flipped, do not execute a game interaction.
       // Just tell the player that the tile is already flipped over.
-      if ( $("." + tileToFlip).hasClass("flipped") ) {
+      else if ( $("." + tileToFlip).hasClass("flipped") ) {
         console.log("This tile is already flipped over! Select another tile.");
       }
       // Check to see if this is the first tile selection in the turn.
